@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Online Food Ordering</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">🍕 FreshBite</div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#restaurants">Restaurants</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="cart.html">🛒 Cart <span id="cart-count">0</span></a></li>
+            <li>
+    <span id="user-welcome"></span>
+</li>
+
+<li>
+    <a href="#" id="logout-link" style="display:none;">
+        Logout
+    </a>
+</li>
+        </ul>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <p class="tagline">Fresh • Delicious • Delivered</p>
+
+            <h1>Good Food,<br>Great Mood! 🍕</h1>
+
+            <p>
+                Discover delicious food from your favourite restaurants
+                and get it delivered right to your doorstep.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#restaurants" class="btn">Order Now</a>
+                <a href="#menu" class="btn secondary-btn">Explore Menu</a>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img
+                src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80"
+                alt="Delicious pizza">
+        </div>
+
+    </section>
+
+
+    <!-- Categories -->
+    <section class="categories">
+
+        <h2>What are you craving?</h2>
+        <p>Choose from our popular food categories</p>
+
+        <div class="category-container">
+
+            <div class="category-card">
+                <span>🍕</span>
+                <h3>Pizza</h3>
+            </div>
+
+            <div class="category-card">
+                <span>🍔</span>
+                <h3>Burgers</h3>
+            </div>
+
+            <div class="category-card">
+                <span>🍜</span>
+                <h3>Noodles</h3>
+            </div>
+
+            <div class="category-card">
+                <span>🍰</span>
+                <h3>Desserts</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Featured Food -->
+    <section id="menu" class="featured">
+
+    <h2>Our Menu 🍽️</h2>
+    <p>Freshly prepared favourites, just for you</p>
+
+    <div class="filter-buttons">
+        <button onclick="filterFood('All')">All</button>
+        <button onclick="filterFood('Pizza')">Pizza</button>
+        <button onclick="filterFood('Burger')">Burgers</button>
+        <button onclick="filterFood('Dessert')">Desserts</button>
+        <button onclick="filterFood('Indian')">Indian</button>
+    </div>
+
+    <div id="food-container" class="food-container">
+        <!-- Food items JavaScript se yahan aayenge -->
+    </div>
+
+</section>
+
+
+    <!-- Restaurants -->
+    <section id="restaurants" class="restaurants">
+
+        <h2>Top Restaurants</h2>
+
+        <div class="restaurant-container">
+
+            <div class="restaurant-card">
+                <h3>🍕 Pizza Paradise</h3>
+                <p>Italian • ⭐ 4.8</p>
+                <p>₹₹ • 25–30 min</p>
+            </div>
+
+            <div class="restaurant-card">
+                <h3>🍔 Burger House</h3>
+                <p>Fast Food • ⭐ 4.6</p>
+                <p>₹ • 20–25 min</p>
+            </div>
+
+            <div class="restaurant-card">
+                <h3>🍜 Spice Kitchen</h3>
+                <p>Indian • ⭐ 4.7</p>
+                <p>₹₹ • 30–35 min</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="about">
+
+        <h2>About FreshBite</h2>
+
+        <p>
+            FreshBite makes ordering delicious food simple and convenient.
+            Discover restaurants, explore menus and enjoy your favourite
+            meals from the comfort of your home.
+        </p>
+
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+
+        <h2>Contact Us</h2>
+
+        <p>📍 Gurugram, Haryana</p>
+        <p>📞 +91 98765 43210</p>
+        <p>✉️ support@freshbite.com</p>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 FreshBite. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

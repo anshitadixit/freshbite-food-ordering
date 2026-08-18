@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Product Details</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍕 FreshBite
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="restaurants.html">Restaurants</a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    🛒 Cart
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="account.html">Account</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <main>
+
+        <section>
+
+            <div
+                id="product-details"
+                class="food-container">
+
+                <!-- JavaScript product details -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 FreshBite. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+        if (typeof updateCartCount === "function") {
+            updateCartCount();
+        }
+
+        if (typeof displayProductDetails === "function") {
+            displayProductDetails();
+        }
+
+    </script>
+
+</body>
+
+</html>

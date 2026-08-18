@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Checkout</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">🍕 FreshBite</div>
+
+        <ul class="nav-links">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="index.html#menu">Menu</a>
+            </li>
+
+            <li>
+                <a href="cart.html">🛒 Cart</a>
+            </li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Checkout Section -->
+    <section class="checkout-section">
+
+        <h1>Checkout 🛍️</h1>
+
+        <div class="checkout-container">
+
+            <!-- Delivery Details -->
+            <div class="checkout-form">
+
+                <h2>Delivery Details</h2>
+
+                <!-- IMPORTANT: placeOrder(event) is connected here -->
+                <form id="checkout-form" onsubmit="placeOrder(event)">
+
+                    <label for="customer-name">
+                        Full Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="customer-name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="customer-phone">
+                        Mobile Number
+                    </label>
+
+                    <input
+                        type="tel"
+                        id="customer-phone"
+                        placeholder="Enter mobile number"
+                        required
+                    >
+
+
+                    <label for="customer-address">
+                        Delivery Address
+                    </label>
+
+                    <textarea
+                        id="customer-address"
+                        rows="4"
+                        placeholder="House no., street, city..."
+                        required
+                    ></textarea>
+
+
+                    <label for="delivery-time">
+                        Delivery Time
+                    </label>
+
+                    <select
+                        id="delivery-time"
+                        required
+                    >
+
+                        <option value="">
+                            Select delivery time
+                        </option>
+
+                        <option value="As soon as possible (25-35 min)">
+                            As soon as possible (25-35 min)
+                        </option>
+
+                        <option value="Within 1 hour">
+                            Within 1 hour
+                        </option>
+
+                        <option value="Schedule for later">
+                            Schedule for later
+                        </option>
+
+                    </select>
+
+
+                    <!-- Payment -->
+                    <h2>Payment Method</h2>
+
+                    <div class="payment-options">
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Cash on Delivery"
+                                required
+                            >
+
+                            💵 Cash on Delivery
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="UPI"
+                            >
+
+                            📱 UPI
+
+                        </label>
+
+
+                        <label>
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                value="Card"
+                            >
+
+                            💳 Credit / Debit Card
+
+                        </label>
+
+                    </div>
+
+
+                    <!-- Place Order -->
+                    <button
+                        type="submit"
+                        class="place-order-btn"
+                    >
+                        Place Order 🍕
+                    </button>
+
+                </form>
+
+            </div>
+
+
+            <!-- Order Summary -->
+            <div class="checkout-summary">
+
+                <h2>Order Summary</h2>
+
+                <!-- Cart items will appear here -->
+                <div id="checkout-items">
+                </div>
+
+
+                <hr>
+
+
+                <!-- Subtotal -->
+                <div class="summary-row">
+
+                    <span>
+                        Subtotal
+                    </span>
+
+                    <span>
+                        ₹<span id="checkout-subtotal">0</span>
+                    </span>
+
+                </div>
+
+
+                <!-- Delivery Fee -->
+                <div class="summary-row">
+
+                    <span>
+                        Delivery Fee
+                    </span>
+
+                    <span>
+                        ₹40
+                    </span>
+
+                </div>
+
+
+                <!-- Total -->
+                <div class="summary-row total">
+
+                    <span>
+                        Total
+                    </span>
+
+                    <span>
+                        ₹<span id="checkout-total">0</span>
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            © 2026 FreshBite. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

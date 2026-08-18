@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Shopping Cart</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+
+        <div class="logo">🍕 FreshBite</div>
+
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#menu">Menu</a></li>
+            <li><a href="index.html#restaurants">Restaurants</a></li>
+            <li>
+    <a href="cart.html">
+        🛒 Cart <span id="cart-count">0</span>
+    </a>
+</li>
+        </ul>
+
+    </nav>
+
+
+    <!-- Cart Section -->
+    <section class="cart-section">
+
+        <h1>Your Shopping Cart 🛒</h1>
+
+        <div id="cart-items" class="cart-items">
+            <!-- Cart items JavaScript se aayenge -->
+        </div>
+
+
+        <!-- Cart Summary -->
+        <div class="cart-summary">
+
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Subtotal</span>
+                <span>₹<span id="subtotal">0</span></span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery Fee</span>
+                <span>₹40</span>
+            </div>
+
+            <hr>
+
+            <div class="summary-row total">
+                <span>Total</span>
+                <span>₹<span id="total">0</span></span>
+            </div>
+
+            <button class="checkout-btn" onclick="goToCheckout()">
+                Proceed to Checkout →
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+        <p>© 2026 FreshBite. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

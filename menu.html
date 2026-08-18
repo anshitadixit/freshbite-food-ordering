@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Menu</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            🍕 FreshBite
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="restaurants.html">Restaurants</a>
+            </li>
+
+            <li>
+                <a href="cart.html">
+                    🛒 Cart
+                    <span id="cart-count">0</span>
+                </a>
+            </li>
+
+            <li>
+                <a href="account.html">Account</a>
+            </li>
+
+            <li>
+                <a href="login.html">Login</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- MENU -->
+
+    <main>
+
+        <section class="featured">
+
+            <h1>Our Menu 🍽️</h1>
+
+            <p>
+                Explore delicious food from FreshBite's collection.
+            </p>
+
+
+            <!-- FILTERS -->
+
+            <div class="filter-buttons">
+
+                <button onclick="filterMenu('All')">
+                    All
+                </button>
+
+                <button onclick="filterMenu('Pizza')">
+                    🍕 Pizza
+                </button>
+
+                <button onclick="filterMenu('Burgers')">
+                    🍔 Burgers
+                </button>
+
+                <button onclick="filterMenu('Indian')">
+                    🍛 Indian
+                </button>
+
+                <button onclick="filterMenu('Dessert')">
+                    🍰 Dessert
+                </button>
+
+                <button onclick="filterMenu('Veg')">
+                    🥗 Veg
+                </button>
+
+                <button onclick="filterMenu('Non-Veg')">
+                    🍗 Non-Veg
+                </button>
+
+            </div>
+
+
+            <!-- FOOD -->
+
+            <div
+                class="food-container"
+                id="menu-food-container">
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            © 2026 FreshBite. All rights reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+    <script>
+
+        if (typeof updateCartCount === "function") {
+            updateCartCount();
+        }
+
+        if (typeof displayMenu === "function") {
+            displayMenu();
+        }
+
+    </script>
+
+</body>
+
+</html>

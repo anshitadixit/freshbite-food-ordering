@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FreshBite - Admin Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="checkAdminLogin()">
+
+    <!-- ================================ -->
+    <!-- ADMIN NAVBAR -->
+    <!-- ================================ -->
+
+    <nav class="navbar admin-navbar">
+
+        <div class="logo">
+            🍕 FreshBite
+            <span class="admin-label">ADMIN</span>
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="index.html">
+                    View Website
+                </a>
+            </li>
+
+            <li>
+                <a href="orders.html">
+                    📦 My Orders
+                </a>
+            </li>
+
+            <li>
+                <a href="#" onclick="adminLogout()">
+                    🚪 Logout
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <!-- ================================ -->
+    <!-- ADMIN DASHBOARD -->
+    <!-- ================================ -->
+
+    <main class="admin-dashboard">
+
+        <!-- Dashboard Header -->
+
+        <div class="admin-header">
+
+            <div>
+
+                <p class="admin-welcome">
+                    Welcome back 👋
+                </p>
+
+                <h1>
+                    Dashboard
+                </h1>
+
+                <p>
+                    Manage FreshBite orders and sales.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================ -->
+        <!-- STATISTICS -->
+        <!-- ================================ -->
+
+        <div class="admin-stats">
+
+            <!-- Total Orders -->
+
+            <div class="admin-stat-card">
+
+                <div class="stat-icon">
+                    📦
+                </div>
+
+                <div>
+
+                    <p>
+                        Total Orders
+                    </p>
+
+                    <h2 id="total-orders">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Total Sales -->
+
+            <div class="admin-stat-card">
+
+                <div class="stat-icon">
+                    💰
+                </div>
+
+                <div>
+
+                    <p>
+                        Total Sales
+                    </p>
+
+                    <h2>
+                        ₹<span id="total-sales">0</span>
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+            <!-- Active Orders -->
+
+            <div class="admin-stat-card">
+
+                <div class="stat-icon">
+                    🟢
+                </div>
+
+                <div>
+
+                    <p>
+                        Active Orders
+                    </p>
+
+                    <h2 id="active-orders">
+                        0
+                    </h2>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================================ -->
+        <!-- ORDERS SECTION -->
+        <!-- ================================ -->
+
+        <section class="admin-orders-section">
+
+            <div class="admin-section-header">
+
+                <!-- Section Title -->
+
+                <div>
+
+                    <h2>
+                        Recent Orders
+                    </h2>
+
+                    <p>
+                        View and manage all customer orders
+                    </p>
+
+                </div>
+
+
+                <!-- Search -->
+
+                <div class="admin-search">
+
+                    <input
+                        type="text"
+                        id="order-search"
+                        placeholder="🔍 Search order, name or phone..."
+                        oninput="searchOrders()"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Orders -->
+
+            <div id="admin-orders-container">
+
+                <!-- Orders JavaScript se yahan aayenge -->
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================================ -->
+    <!-- FOOTER -->
+    <!-- ================================ -->
+
+    <footer>
+
+        <p>
+            © 2026 FreshBite. Admin Panel
+        </p>
+
+    </footer>
+
+
+    <!-- ================================ -->
+    <!-- JAVASCRIPT -->
+    <!-- ================================ -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
